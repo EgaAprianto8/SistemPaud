@@ -1,14 +1,50 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
-const Sidebar = () => {
+const DashboardLayouts = () => {
   return (
     <div className="flex flex-col h-full">
+      {/* Navbar */}
+      <div className="flex w-full bg-[#9b52bd] h-[20%] drop-shadow-xl">
+        <div className="w-full p-[30px] flex justify-between ">
+          <div className="flex flex-row">
+            <div className="relative w-[50px] h-[50px]">
+              <Image
+                src="/images/logoSistem.png"
+                alt="logo"
+                fill={true}
+                className="object-cover"
+              />
+            </div>
+            <div className="border-r border-white mr-[15px] ml-[15px] h-[35px] my-auto" />
+            <h1 className="font-bold text-white my-auto text-2xl">
+              Sistem Informasi PAUD Bani Ruqoyah
+            </h1>
+          </div>
+          <Popover>
+            <PopoverTrigger>
+              <div className="relative w-[50px] h-[50px] bg-white rounded-full"></div>
+            </PopoverTrigger>
+            <PopoverContent>
+              <div className="flex flex-col gap-2">
+                <button title="p" className="hover:bg-[#f5e0ff] bg-white text-black hover:text-[#9B52BD] p-2 rounded-2xl">
+                  Profile
+                </button>
+                <button title="p" className="hover:bg-red-200 bg-white p-2 rounded-2xl">
+                  Logout
+                </button>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
+      </div>
       <div className="bg-[#9b52bd] w-full h-[100px]" />
-      <div className="flex flex-row ">
-
+      {/* Sidebar */}
+      <div className="flex flex-row">
         {/* Navigasi Sidebar */}
-        <div className="bg-white  -mt-14 h-[800px] xl:w-[20%] sm:w-[30%] flex flex-col gap-20 border mx-10 rounded-xl">
+        <div className="bg-white -mt-14 h-[800px] xl:w-[20%] sm:w-[30%] flex flex-col gap-20 border mx-10 rounded-xl">
           <div className="flex flex-col gap-4 p-10">
             <div className="relative xl:w-[75px] xl:h-[75px] sm:w-[50px] sm:h-[50px] rounded-full bg-white border mx-auto"></div>
             <div className="flex flex-col gap-2">
@@ -75,12 +111,17 @@ const Sidebar = () => {
 
         {/* Nama Halaman */}
         <div className="my-auto text-white -mt-[55px] font-semibold xl:text-4xl text-3xl">
-            Beranda
+          Beranda
         </div>
 
+        <div className="mx-auto my-auto">
+          <div className="w-full bg-white border rounded-2xl h-full p-64 shadow-md">
+         MASUKAN KONTEN DISINI
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default DashboardLayouts;
