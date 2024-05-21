@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import DataSiswa from "../pages/DataSiswa";
 
 const DashboardLayouts = () => {
   return (
@@ -44,7 +45,7 @@ const DashboardLayouts = () => {
       {/* Sidebar */}
       <div className="flex flex-row">
         {/* Navigasi Sidebar */}
-        <div className="bg-white -mt-14 h-[800px] xl:w-[20%] sm:w-[30%] flex flex-col gap-20 border mx-10 rounded-xl">
+        <div className="bg-white -mt-14 h-[800px] xl:w-[20%] sm:w-[30%] flex flex-col gap-20 border ml-10 rounded-xl">
           <div className="flex flex-col gap-4 p-10">
             <div className="relative xl:w-[75px] xl:h-[75px] sm:w-[50px] sm:h-[50px] rounded-full bg-white border mx-auto"></div>
             <div className="flex flex-col gap-2">
@@ -110,13 +111,13 @@ const DashboardLayouts = () => {
         </div>
 
         {/* Nama Halaman */}
-        <div className="my-auto text-white -mt-[55px] font-semibold xl:text-4xl text-3xl">
+        <div className="absolute my-auto ml-10 text-white -mt-[55px] left-[400px] font-semibold xl:text-4xl text-3xl">
           Beranda
         </div>
 
         <div className="mx-auto my-auto">
-          <div className="w-full bg-white border rounded-2xl h-full p-64 shadow-md">
-         MASUKAN KONTEN DISINI
+          <div className="w-full bg-white border rounded-2xl h-full shadow-md">
+         <DataSiswa/>
           </div>
         </div>
       </div>
