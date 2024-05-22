@@ -1,11 +1,12 @@
+import DashboardLayouts from "./dashboard/layout";
 
-import DashboardLayouts from "@/components/layouts/DashboardLayouts";
-import Image from "next/image";
-
-export default function Home() {
+ function Home() {
   return (
     <>
-      <DashboardLayouts/>
+      <h1>Halo tambahin /dashboard di localhost:3000 nya</h1>
+      <h1>Jadi "localhost:3000/dasboard"</h1>
     </>
   );
 }
+
+export default Home
