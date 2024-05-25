@@ -1,9 +1,12 @@
-import React from 'react'
+import { queryData } from "@/utils/getQueryOutput";
 
-function DataSiswa() {
+const Home = async () => {
+  const queryOutput = await queryData();
+  console.log(JSON.stringify(queryOutput, null, 2))
   return (
-    <div>DataSiswa</div>
-  )
+    <div>page\\</div>
+  );
+
 }
 
-export default DataSiswa
+export default Home
