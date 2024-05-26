@@ -1,12 +1,14 @@
-import DashboardLayouts from "./dashboard/layout";
+import { redirect } from 'next/navigation';
+import DashboardLayouts from './dashboard/layout';
 
- function Home() {
-  return (
-    <>
-      <h1>Halo tambahin /dashboard di localhost:3000 nya</h1>
-      <h1>Jadi "localhost:3000/dasboard"</h1>
-    </>
-  );
+function Home() {
+    redirect('/dashboard');
+    return (
+        <>
+            <h1>Halo tambahin /dashboard di localhost:3000 nya</h1>
+            <h1>Jadi "localhost:3000/dasboard"</h1>
+        </>
+    );
 }
 
-export default Home
+export default Home;

@@ -1,13 +1,8 @@
-import React from 'react'
-import Beranda from './beranda/page'
-
+import React from 'react';
+import Beranda from './beranda/page';
 
 function page() {
-  return (
-    <div>
-      <Beranda/>
-    </div>
-  )
+    return <Beranda />;
 }
 
-export default page
+export default page;
