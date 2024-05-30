@@ -68,8 +68,12 @@ function RapotSem() {
                 </SelectContent>
               </Select>
             </td>
-            <td className="items-center w-auto h-auto">
-              <Input id="filerapot" type="file" />
+            <td className="items-center w-auto h-auto items-center w-64 h-auto ">
+              <Input
+                id="filerapot"
+                type="file"
+                className="hover:bg-gray-200 hover:shadow-md transition duration-300"
+              />
             </td>
           </tr>
           <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -95,8 +99,12 @@ function RapotSem() {
                 </SelectContent>
               </Select>
             </td>
-            <td className="items-center w-auto h-auto">
-              <Input id="filerapot" type="file" />
+            <td className="items-center w-64 h-auto">
+              <Input
+                id="filerapot"
+                type="file"
+                className="hover:bg-gray-200 hover:shadow-md transition duration-300"
+              />
             </td>
           </tr>
         </tbody>
